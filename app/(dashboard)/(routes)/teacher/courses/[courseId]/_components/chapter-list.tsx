@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 interface ChapterListProps {
   items: Chapter[];
   onEdit: (id: string) => void;
-  onReorder: (updatedata: { id: string; postion: number }[]) => void;
+  onReorder: (updatedata: { id: string; position: number }[]) => void;
 }
 
 const ChapterList = ({ items, onEdit, onReorder }: ChapterListProps) => {
@@ -31,6 +31,7 @@ const ChapterList = ({ items, onEdit, onReorder }: ChapterListProps) => {
   }, [items]);
 
   const onDragEnd = (result: DropResult) => {
+    console.log(result);
     if (!result.destination) return;
 
     const items = Array.from(chapters);
@@ -49,7 +50,7 @@ const ChapterList = ({ items, onEdit, onReorder }: ChapterListProps) => {
       position: items.findIndex((item) => item.id === chapter.id),
     }));
 
-    // onReorder(bulkUpdateData);
+    onReorder(bulkUpdateData);
   };
 
   if (!isMounted) {
