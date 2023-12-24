@@ -31,6 +31,7 @@ const ChapterIdPage = async ({
       muxData: true,
     },
   });
+  console.log(chapter);
   if (!chapter) {
     redirect("/");
   }
