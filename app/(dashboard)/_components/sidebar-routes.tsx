@@ -1,6 +1,15 @@
 "use client";
 
-import { Layout, Compass, List, BarChart } from "lucide-react";
+import {
+  Layout,
+  Compass,
+  List,
+  BarChart,
+  Trophy,
+  Mail,
+  GraduationCap,
+  MessageCircle,
+} from "lucide-react";
 import { SidebarItem } from "./side-bar-item";
 import { usePathname } from "next/navigation";
 
@@ -14,6 +23,26 @@ const guestRoutes = [
     icon: Compass,
     label: "Browse",
     href: "/search",
+  },
+  {
+    icon: Trophy,
+    label: "Leaderboard",
+    href: "/teacher/leaderboard",
+  },
+  {
+    icon: Mail,
+    label: "Newsletter",
+    href: "/teacher/newsletter",
+  },
+  {
+    icon: GraduationCap,
+    label: "Mentorship",
+    href: "/teacher/mentorship",
+  },
+  {
+    icon: MessageCircle,
+    label: "Go to group chat",
+    href: "/teacher/chat",
   },
 ];
 
