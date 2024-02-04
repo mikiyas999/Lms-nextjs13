@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     });
     return NextResponse.json(course);
   } catch (error) {
-    console.log("[COURSES] ", error);
+    console.log("[All_COURSES] ", error);
     return new NextResponse("Internal server error", { status: 500 });
   }
 }
