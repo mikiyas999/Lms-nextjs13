@@ -1,6 +1,7 @@
 import { Category, Course } from "@prisma/client";
 
 import { CourseCard } from "@/components/course-card";
+import { Skeleton } from "./ui/skeleton";
 
 type CourseWithProgressWithCategory = Course & {
   category: Category | null;
@@ -37,3 +38,16 @@ export const CoursesList = ({ items }: CoursesListProps) => {
     </div>
   );
 };
+
+export function CourseSkeletonCard() {
+  return (
+    <div className="flex flex-col space-y-3">
+      <Skeleton className="h-[170px] w-[250px] rounded-xl bg-slate-500/20" />
+      <div className="space-y-2">
+        <Skeleton className="h-4 w-[250px] bg-slate-500/20" />
+        <Skeleton className="h-4 w-[200px] bg-slate-500/20" />
+        <Skeleton className="h-4 w-[150px] bg-slate-500/20" />
+      </div>
+    </div>
+  );
+}
