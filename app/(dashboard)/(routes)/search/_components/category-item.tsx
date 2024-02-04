@@ -3,7 +3,7 @@
 import qs from "query-string";
 import { IconType } from "react-icons";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
+import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
 interface CategoryItemProps {
@@ -55,3 +55,7 @@ export const CategoryItem = ({
     </button>
   );
 };
+
+export function CategoryItemSekelton() {
+  return <Skeleton className="w-[150px] h-9 rounded-2xl bg-slate-500/20" />;
+}
