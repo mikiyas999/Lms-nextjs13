@@ -25,7 +25,7 @@ export const ConfirmModal = ({ children, onConfirm }: ConfirmModalProps) => {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone.
+            This action cannot be undone!
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
